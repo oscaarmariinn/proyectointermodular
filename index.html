@@ -4,36 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante</title>
+    <link rel="icon" type="image/jpg" href="logo.ico"/>
     <style>
 
         body{
             display: flex;
-            justify-content: center;
             flex-direction: column;
-            background-color: darkgrey;
+            background: linear-gradient(to bottom right, black, #FFD700);
             font-family: Copperplate, "Copperplate Gothic Light", fantasy; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: Copperplate, "Copperplate Gothic Light", fantasy; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Copperplate, "Copperplate Gothic Light", fantasy; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Copperplate, "Copperplate Gothic Light", fantasy; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Copperplate, "Copperplate Gothic Light", fantasy; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
             
-        }
+            }
         h1{
             color: white;
+            text-align: center;
+            text-shadow: 5px 5px 5px black;
         }
         nav{
             display: flex;
             flex-direction: row;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            box-shadow: 10px 5px 5px black;
+            opacity: 0.6;
+            border-radius: 15px;
+            justify-content: space-between  ;
+            height: 40px;
         }
-
+        #opciones_nav{
+            padding-left: 50px;
+            display: flex;
+            flex-direction: row;
+            padding-top: 8px;
+        }
+        #opciones_nav div{
+            margin-right: 80px;
+        }
+        h2{
+            text-shadow: 5px 5px 5px black;
+            color: white;
+        }
+        img{
+            height: 350px;
+            width: 600px;
+            box-shadow: 10px 5px 5px black;
+            border-radius: 20px;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+        .texto{
+            font-size: 18px;
+        }
+        nav a{
+            text-decoration: none;
+            color: white;
+        }
+        .logo img   {
+            height: 50px;
+            width: 50px;
+        }
+        .container2{
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+            flex-direction: row;
+            padding-left: 70px;
+        }
+        .mapa{
+            width: 600px;
+            height: 400px;
+            border-radius: 20px;
+            box-shadow: 10px 5px 5px black;
+        }
+        .ubicacion{
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
+    <header>
     <h1>
         Restaurante Dialados
     </h1>
-    <header>
+    
         <nav>
-            <div>Inicio</div>
-            <div>Reservas</div>
-            <div>Contacto   </div>
+            <div id="opciones_nav">
+                <div><a href="index.html">Inicio</a></div>
+                <div><a href="reservas.php">Reservas</a></div>
+                <div><a href="info.html">Contacto</a></div>
+            </div>
+            <div class="logo"><img src="logo.png"></div>
         </nav>
     </header>
+    <h2 style=" padding-left: 70px;">Nuestro Restaurante</h2>
+    <div class="container">
+        <div class="imagen"><img src="principal.jpg"></div>
+        <div class="texto" style="margin-left: 60px;">
+            <h2>¿Que es Dialados?</h2>
+            En un ambiente elegante y acogedor, Dialados es el lugar ideal para disfrutar de una experiencia culinaria inolvidable en compañía de familia, amigos o pareja. Su cuidada decoración y atención al detalle crean el escenario perfecto para compartir momentos especiales. La cocina innovadora sorprende con sabores únicos, combinando ingredientes frescos y técnicas vanguardistas que despiertan todos los sentidos. Cada plato es una invitación a descubrir nuevas sensaciones, ideal para quienes buscan algo diferente. Ya sea una celebración íntima o una cena relajada, Dialados ofrece el equilibrio perfecto entre sofisticación, calidez y creatividad gastronómica.
+        </div>
+    </div>
+    <div class="container2">
+        <div class="texto" style="margin-top: 200px;">
+            Dialados está ubicado en el corazón de la Ciudad de las Artes y las Ciencias, un entorno emblemático que combina arte, ciencia y arquitectura. Su privilegiada localización lo convierte en el lugar perfecto para disfrutar de la alta gastronomía en un ambiente único y cultural
+        </div>
+        <div class="ubicacion">
+            <h2>¿Donde nos encontramos?</h2>
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2767.166512319686!2d-0.3524447820902523!3d39.45662243856359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6048e9d19b4381%3A0x62eb4407a5ebf894!2sCiudad%20de%20las%20Artes%20y%20las%20Ciencias!5e1!3m2!1ses!2ses!4v1746524446363!5m2!1ses!2ses"></iframe>
+        </div>
+    </div>
 </body>
 </html>
