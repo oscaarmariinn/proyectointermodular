@@ -2,26 +2,22 @@ DROP DATABASE IF EXISTS restaurante;
 CREATE DATABASE restaurante;
 USE restaurante;
 
-CREATE TABLE mesa (
-    id_mesa INT PRIMARY KEY,
-    personas INT,
-    zona VARCHAR(50)
+CREATE TABLE zona (
+    id_zona INT PRIMARY KEY,
+    nombre VARCHAR(20),
+    aforo VARCHAR(50)
 );
 
 CREATE TABLE reserva (
     id_reserva INT PRIMARY KEY,
     nombre VARCHAR(100),
-    mesa INT,
+    zona INT,
     fecha DATE,
-    FOREIGN KEY (mesa) REFERENCES mesa(id_mesa)
+    personas INT,
+    FOREIGN KEY (zona) REFERENCES zona(id_zona)
 );
 
-INSERT INTO mesa (id_mesa, personas, zona) VALUES (1, 2, 'Terraza');
-INSERT INTO mesa (id_mesa, personas, zona) VALUES (2, 4, 'Terraza');
-INSERT INTO mesa (id_mesa, personas, zona) VALUES (3, 6, 'Terraza');
+INSERT INTO zona(id_zona, nombre, aforo)
+Values (1, "Interior", 20);
 
-INSERT INTO mesa (id_mesa, personas, zona) VALUES (4, 10, 'Interior');
-INSERT INTO mesa (id_mesa, personas, zona) VALUES (5, 4, 'Interior');
-INSERT INTO mesa (id_mesa, personas, zona) VALUES (6, 4, 'Interior');
-INSERT INTO mesa (id_mesa, personas, zona) VALUES (7, 4, 'Interior');
-INSERT INTO mesa (id_mesa, personas, zona) VALUES (8, 4, 'Interior');
+INSERT INTO zona(id_zona, nombre, aforo) VALUES (2, "Terraza", 10);
